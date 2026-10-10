@@ -7,10 +7,9 @@
   document.querySelectorAll('[data-i18n]').forEach(el=>{if(shared[el.dataset.i18n])el.dataset.en=shared[el.dataset.i18n];});
   document.querySelectorAll('[data-en]').forEach(el=>el.dataset.zh=el.innerHTML);
   document.querySelectorAll('[data-alt-en]').forEach(el=>el.dataset.altZh=el.alt);
-  let lang='zh',lastRequest=null,activeChannel=null;
-  try{const query=new URLSearchParams(location.search).get('lang');lang=query==='en'||query==='zh'?query:localStorage.getItem('rhyvia-language')==='en'?'en':'zh';}catch{}
+  let lang=window.RHYVIA_LANGUAGE.initial(),lastRequest=null,activeChannel=null;
   const copy=(zh,en)=>lang==='en'?en:zh;
-  function translate(next){
+  function translate(next,remember=false){
     lang=next;
     document.documentElement.lang=lang==='en'?'en':'zh-CN';
     document.querySelectorAll('[data-en]').forEach(el=>el.innerHTML=el.dataset[lang==='en'?'en':'zh']);
@@ -24,7 +23,7 @@
     toggle.setAttribute('aria-label',copy('切换导航','Toggle navigation'));
     document.querySelectorAll('.gallery-thumbs').forEach(el=>el.setAttribute('aria-label',copy('产品图片','Product images')));
     document.querySelectorAll('.mode-tabs').forEach(el=>el.setAttribute('aria-label',copy('律动模式','Motion modes')));
-    try{localStorage.setItem('rhyvia-language',lang);}catch{}
+    if(remember)window.RHYVIA_LANGUAGE.remember(lang);
     refreshContacts();
     if(dialog?.open)renderDialog();
   }
@@ -32,7 +31,7 @@
   toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';menu.hidden=!open;toggle.setAttribute('aria-expanded',String(open));document.body.classList.toggle('menu-open',open);header.classList.toggle('menu-visible',open);});
   menu.querySelectorAll('a').forEach(el=>el.addEventListener('click',closeMenu));
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!menu.hidden){closeMenu();toggle.focus();}});
-  document.querySelectorAll('.language').forEach(el=>el.addEventListener('click',()=>translate(lang==='en'?'zh':'en')));
+  document.querySelectorAll('.language').forEach(el=>el.addEventListener('click',()=>translate(lang==='en'?'zh':'en',true)));
   const reveals=[...document.querySelectorAll('.reveal')];
   let observer;
   if('IntersectionObserver'in window&&!motion.matches){
@@ -67,6 +66,8 @@
   });
 
   const dialog=document.querySelector('#contact-dialog');
+  dialog?.addEventListener('close',()=>document.body.classList.remove('dialog-open'));
+  function openDialog(){dialog.showModal();document.body.classList.add('dialog-open');}
   const summary=document.querySelector('#request-summary');
   const status=document.querySelector('#copy-status');
   const message=document.querySelector('#contact-message');
@@ -101,7 +102,7 @@
     else if(lastRequest)message.textContent=copy('预约信息已整理好，尚未发送。你可以复制保存，待联系方式开放后联系团队。','Your request is ready and has not been sent. Copy it for now, then contact the team once contact details are available.');
     else message.textContent=copy('该联系方式尚未公布。你可以先在下方填写座椅、日期和地点，整理一份预约信息。','Contact details for this channel are not available yet. You can prepare your preferred chair, date and location using the form below.');
   }
-  document.querySelectorAll('[data-contact]').forEach(button=>button.addEventListener('click',()=>{activeChannel=button.dataset.contact;renderDialog();dialog.showModal();}));
+  document.querySelectorAll('[data-contact]').forEach(button=>button.addEventListener('click',()=>{activeChannel=button.dataset.contact;renderDialog();openDialog();}));
   document.querySelectorAll('.contact-dialog .dialog-close,#dialog-done').forEach(button=>button.addEventListener('click',()=>dialog.close()));
   dialog?.addEventListener('click',event=>{if(event.target!==dialog)return;const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();});
   const form=document.querySelector('#booking-form');
@@ -110,7 +111,7 @@
     date.min=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');
     const chair=new URLSearchParams(location.search).get('chair');
     if(['ONE','TWO','THREE'].includes(chair))form.elements.chair.value=chair;
-    form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;lastRequest=Object.fromEntries(new FormData(form));activeChannel=config.email?'email':config.whatsapp?'whatsapp':null;renderDialog();dialog.showModal();});
+    form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;lastRequest=Object.fromEntries(new FormData(form));activeChannel=config.email?'email':config.whatsapp?'whatsapp':null;renderDialog();openDialog();});
     copyButton.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(summary.value);status.textContent=copy('已复制预约信息，尚未发送。','Request copied. Nothing has been sent.');}catch{summary.focus();summary.select();status.textContent=copy('请使用系统复制快捷键保存已选中的信息。','Use your system copy shortcut to copy the selected request.');}});
   }
   translate(lang);scroll();

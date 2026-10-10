@@ -1,0 +1,22 @@
+# Overseas server template. Set RHYVIA_DOMAIN to the real public domain.
+# Point DNS at the server and allow inbound TCP 80/443 before starting Caddy.
+# Copy only dist/ contents to /var/www/rhyvia; never serve the repository root.
+# Keep Caddy's data directory persistent for certificate renewal.
+{$RHYVIA_DOMAIN} {
+    root * /var/www/rhyvia
+    encode zstd gzip
+    file_server
+
+    header {
+        X-Content-Type-Options nosniff
+        Referrer-Policy strict-origin-when-cross-origin
+        Permissions-Policy "camera=(), microphone=(), geolocation=()"
+    }
+
+    @documents path / /chairs/ /technology/ /our-story/ /experience/ *.html
+    header @documents Cache-Control "no-cache"
+    @scripts path *.js *.css
+    header @scripts Cache-Control "no-cache"
+    @images path /assets/*
+    header @images Cache-Control "public, max-age=86400"
+}

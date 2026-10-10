@@ -30,7 +30,8 @@
     // Composited scroll layers can briefly have no hit-test target. Keep the
     // current pointer rather than restoring the system arrow for one frame.
     if (!target) return;
-    if (document.querySelector('dialog[open]') || target.closest(nativeTarget)) {
+    if (document.querySelector('dialog[open]')) { hide(); return; }
+    if (target.closest(nativeTarget)) {
       cursor.classList.remove('is-visible', 'is-interactive', 'is-pressed');
       return;
     }

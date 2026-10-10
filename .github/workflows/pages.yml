@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+      - name: Check language selection
+        run: node --test tests/language.test.cjs
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
