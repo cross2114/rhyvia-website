@@ -7,7 +7,7 @@ import shutil
 from urllib.parse import unquote, urljoin, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-ATTR = re.compile(r'''(\b(?:href|src|data-image)\s*=\s*["'])/(?!/)''')
+ATTR = re.compile(r'''(\b(?:href|src|data-image|data-src-en|data-src-zh)\s*=\s*["'])/(?!/)''')
 
 
 class References(HTMLParser):
@@ -17,7 +17,7 @@ class References(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         self.urls.extend(value for key, value in attrs
-                         if key in {"href", "src", "data-image"} and value)
+                         if key in {"href", "src", "data-image", "data-src-en", "data-src-zh"} and value)
 
 
 def prepare(base_path):

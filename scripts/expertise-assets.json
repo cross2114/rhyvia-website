@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-19",
+  "page": "/our-story/",
+  "generated_lifestyle": {
+    "file": "dist/assets/expertise-atrium-20261019.png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "method": "Built-in image_gen tool",
+    "purpose": "Illustrative lifestyle scene; not a documentary photograph or exact product specification.",
+    "prompt": "Use case: photorealistic-natural. Asset type: premium wellness furniture website editorial photograph. Generate one high-resolution square photograph inspired ONLY by the mid-page portrait scene in the provided tall reference layout: an adult woman in an elegant long ivory dress calmly reclining in a cream leather extended lounge chair in a serene monumental ivory travertine atrium. Sculptural, flowing translucent beige silk hangs horizontally high overhead, soft circular skylight, curved walls, warm reflected daylight, subtle floor reflections, airy quiet luxury. Whole woman including head and feet and the entire reclined chair visible in lower two thirds, tasteful realistic anatomy and upholstery. Match reference portrait’s palette and atmosphere. This is an illustrative lifestyle scene, not a factory or corporate documentary. Do not reproduce the webpage, collage, logos, copy, buttons, awards, certificates or navigation. Just a single crisp photographic scene with fine natural material detail, no text or watermark. Balanced full composition with safe margins for a square web panel."
+  },
+  "client_evidence": {
+    "file": "dist/assets/expertise-client-reference-20261019.png",
+    "dimensions": [
+      1448,
+      4586
+    ],
+    "source": "Client-supplied 8c43ed6ff727a03ad9cdad87a94d2728.png",
+    "method": "Original pixels, displayed through CSS crop windows; no generated buildings, awards or certificates.",
+    "limitation": "Headquarters and rocket still use the supplied layout. Factory, showroom, awards and certification use separate high-resolution client originals."
+  },
+  "globe": {
+    "file": "dist/assets/expertise-globe.svg",
+    "method": "Code-native decorative SVG; simplified continental shapes",
+    "meaning": "Decorative geographic motif, not a map of confirmed service locations.",
+    "animation": "Canvas 2D orthographic rotation, orbiting highlights; pauses offscreen, in background tabs and for reduced-motion preference; manual pause control and static SVG fallback.",
+    "countries": {
+      "source": "Client image 02179c58f0b02391a82d5d6422943f07.png",
+      "count": 27,
+      "coordinates": "Approximate country anchors, not retail or service locations. Existing client reach statistic of 28 countries/regions remains unchanged.",
+      "flags": "flag-icons 7.3.2, https://github.com/lipis/flag-icons; MIT license included in dist/assets/flags/LICENSE"
+    }
+  },
+  "copy": {
+    "source": "Latest client design",
+    "attribution": "Historical, patent, manufacturing and reach figures refer to CBD Home / CBD brand network.",
+    "verification": "Client-provided statements; no independent certification or corporate verification performed."
+  },
+  "review": {
+    "desktop": "1280 × 720, Chinese and English",
+    "mobile": "390 × 844, Chinese and English",
+    "checks": [
+      "No horizontal page overflow",
+      "All page images load",
+      "Language switches to 28 countries / 6M+ households correctly",
+      "Local link packaging checked"
+    ],
+    "publication": "Local preview only"
+  },
+  "client_hd_originals": {
+    "certification": {
+      "file": "dist/assets/expertise-certification-hd-20261019.png",
+      "source": "d4e5f7878f03c7a03d4cb84c7bcaadac.png",
+      "method": "Client-supplied original; copied without pixel edits."
+    },
+    "showroom": {
+      "file": "dist/assets/expertise-showroom-hd-20261019.png",
+      "source": "a52fe16b6184c7c8e40c14e65b3cdd05.png",
+      "method": "Client-supplied original; copied without pixel edits."
+    },
+    "awards": {
+      "file": "dist/assets/expertise-awards-hd-20261019.png",
+      "source": "852249dcf9352d3c519b3fe1566223ef.png",
+      "method": "Client-supplied original; copied without pixel edits."
+    },
+    "factory": {
+      "file": "dist/assets/expertise-factory-hd-20261019.png",
+      "source": "4e68be6514acf932de215d312abce4f7.png",
+      "dimensions": [
+        2171,
+        724
+      ],
+      "method": "Client-supplied original; copied without pixel edits."
+    }
+  }
+}

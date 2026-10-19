@@ -14,6 +14,10 @@
     document.documentElement.lang=lang==='en'?'en':'zh-CN';
     document.querySelectorAll('[data-en]').forEach(el=>el.innerHTML=el.dataset[lang==='en'?'en':'zh']);
     document.querySelectorAll('[data-alt-en]').forEach(el=>el.alt=el.dataset[lang==='en'?'altEn':'altZh']);
+    document.querySelectorAll('img[data-src-en]').forEach(el=>{
+      const src=el.dataset[lang==='en'?'srcEn':'srcZh'];
+      if(el.getAttribute('src')!==src)el.src=src;
+    });
     document.title=document.body.dataset[lang==='en'?'titleEn':'titleZh'];
     document.querySelector('meta[name=description]').content=copy(document.title+'。探索 RHYVIA 水平律动座椅，让舒适融入日常。',document.title+'. Discover gentle horizontal motion and considered comfort for everyday life.');
     document.querySelectorAll('.language').forEach(el=>{el.textContent=el.classList.contains('footer-language')?copy('ENGLISH ↗','简体中文 ↗'):copy('EN','中文');el.setAttribute('aria-label',copy('Switch to English','切换为中文'));});

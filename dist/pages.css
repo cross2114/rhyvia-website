@@ -37,3 +37,9 @@ html[lang=en] .inner-page h1{font-size:clamp(46px,4.6vw,70px);line-height:1.12}h
 .lifestyle-card figure img{object-position:center top}
 
 .gallery-thumbs{justify-content:center}
+
+/* Updated studio galleries keep the supplied composition and blend white into the page. */
+.gallery-updated .gallery-main{width:100%;aspect-ratio:1672/941}
+/* Blend the whole thumbnail: its opacity creates a group that isolates child blending. */
+.gallery-updated .gallery-photo,.gallery-updated .gallery-thumb{mix-blend-mode:multiply}
+.gallery-updated .gallery-thumb img{mix-blend-mode:normal}
