@@ -1,0 +1,6 @@
+{
+  "tool": "built-in image_gen",
+  "source": "43995d3c1e8bf338f500f9601d6a0384.jpg",
+  "output": "dist/assets/rhythm-scene-20261021.png",
+  "prompt": "Use case: precise-object-edit. Edit target: the supplied website screenshot. Produce a clean background photograph with the EXACT same wide composition and aspect ratio. Remove ALL webpage UI on the left: heading Your rhythm Your choice, all paragraph text, five card rectangles including borders/icons/arrows/text, the footer sentence, and the white circular mouse cursor. Reconstruct those areas as the existing softly lit warm ivory wall and floor with faint leaf shadows. Preserve the entire right-hand chair EXACTLY, including dark charcoal base, red round side control, cream cushions, ghosted motion silhouettes and gold wave lines; preserve vase, curtains, wood wall, rug, sunlight and image edges. Do not add text, symbols, furniture, or logos. Left half should be clean spacious photographic wall/floor for live website text. Do not crop or reposition the chair."
+}

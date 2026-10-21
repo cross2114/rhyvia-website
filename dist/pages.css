@@ -43,3 +43,9 @@ html[lang=en] .inner-page h1{font-size:clamp(46px,4.6vw,70px);line-height:1.12}h
 /* Blend the whole thumbnail: its opacity creates a group that isolates child blending. */
 .gallery-updated .gallery-photo,.gallery-updated .gallery-thumb{mix-blend-mode:multiply}
 .gallery-updated .gallery-thumb img{mix-blend-mode:normal}
+
+/* Keep copy legible over the updated three-chair expertise scene. */
+@media(min-width:761px){
+ .expertise-hero .inner-hero-shade{background:linear-gradient(180deg,rgba(246,242,233,.55),transparent 23%),linear-gradient(90deg,rgba(246,242,233,.92),rgba(246,242,233,.72) 27%,rgba(246,242,233,.22) 48%,transparent 66%)}
+ .expertise-hero .hero-lead{max-width:410px}
+}

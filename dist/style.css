@@ -104,3 +104,10 @@ html[lang=en] h1{font-size:68px;line-height:1.1;max-width:650px;margin-bottom:30
 
 /* Dialog scroll locking also works in browsers without :has(). */
 body.dialog-open{overflow:hidden}
+
+/* Frame the new wide RHYVIA TWO scene without cropping its side controls. */
+.personalized-photo img{object-position:right center}
+@media(max-width:760px){
+ .personalized-photo{inset:auto 0 0;height:430px}
+ .personalized-shade{background:linear-gradient(180deg,#f3eee6 0%,#f3eee6 56%,#f3eee6c2 65%,transparent 78%)}
+}
