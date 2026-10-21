@@ -53,3 +53,6 @@ html[lang=en] .inner-page h1{font-size:clamp(46px,4.6vw,70px);line-height:1.12}h
 /* Match ONE's visual presence to the adjacent collection photographs. */
 .collection-card[href="#one"] .collection-image img{transform:scale(1.18);transform-origin:50% 20%}
 .collection-card[href="#one"]:hover .collection-image img{transform:scale(1.2213)}
+
+/* Keep the product grid within narrow screens when five thumbnails are shown. */
+.product-gallery,.product-copy{min-width:0}
