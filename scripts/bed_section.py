@@ -18,7 +18,7 @@ def build_bed_section(bi, img, button, label, title):
     content += bi('h2', '律动健康科技，<br>为深度休息而生。', 'Rhythm technology.<br>Made for deeper rest.', 'id="bed-title"')
     content += bi('p', 'RHYVIA 律动床将温和的水平律动延伸至全尺寸床体，<br>为休息与放松带来更完整的体验。接受特别订购。', 'The RHYVIA rhythm bed brings gentle horizontal motion to a full-size bed.<br>A more complete experience of rest and relaxation, available by special order.', 'class="section-lead"')
     content += '</header><figure class="bed-scene reveal">'
-    content += img('rhythm-bed-20261021.jpg', '暖色卧室中的 RHYVIA 双床组合律动床', 'The RHYVIA rhythm bed in a warm, sunlit bedroom', 'bed-photo')
+    content += img('rhythm-bed-20261022.jpg', '暖色卧室中的 RHYVIA 双床组合律动床', 'The RHYVIA rhythm bed in a warm, sunlit bedroom', 'bed-photo')
     content += '<a class="bed-order-tag" href="#bed-inquiry">'+bi('span', '特别订购', 'SPECIAL ORDER')+'<span aria-hidden="true">↗</span></a>'
     content += '<figcaption class="bed-scene-caption">RHYVIA · '+bi('span', '律动床', 'RHYTHM BED')+'</figcaption>'
     content += '<button type="button" class="bed-view" data-bed-open aria-haspopup="dialog" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5m6 0h5v5M4 15v5h5m6 0h5v-5"/></svg>'+bi('span', '查看大图', 'View the setting')+'</button></figure>'
@@ -29,5 +29,5 @@ def build_bed_section(bi, img, button, label, title):
         content += f'<article class="bed-feature reveal" style="--reveal-delay:{i * 80}ms"><span class="bed-feature-number" aria-hidden="true">0{i+1}</span><span class="bed-feature-icon"><svg viewBox="0 0 40 40" aria-hidden="true">{icons[key]}</svg></span>'+bi('h3', zh, en)+bi('p', body_zh, body_en)+'</article>'
     content += '</div><div class="bed-inquiry reveal" id="bed-inquiry"><div>'+label('特别订购服务', 'SPECIAL ORDER SERVICE')+title('为您的空间<br>量身打造。', 'Made to belong<br>in your space.')+bi('p', '欢迎联系我们，了解您所在地区的尺寸、饰面及供应信息。', 'Contact us to explore sizes, finishes and availability in your region.', 'class="section-lead"')+'</div>'
     content += button('咨询律动床', 'Enquire about the rhythm bed', inquiry)+'</div></section>'
-    content += '<dialog class="bed-dialog" id="bed-dialog" aria-labelledby="bed-dialog-title"><div class="bed-dialog-bar">'+bi('p', 'RHYVIA 律动床', 'RHYVIA rhythm bed', 'id="bed-dialog-title"')+'<button type="button" data-bed-close>'+bi('span', '关闭', 'Close')+'<span aria-hidden="true">×</span></button></div>'+img('rhythm-bed-20261021.jpg', 'RHYVIA 律动床完整场景', 'Full view of the RHYVIA rhythm bed setting')+'</dialog>'
+    content += '<dialog class="bed-dialog" id="bed-dialog" aria-labelledby="bed-dialog-title"><div class="bed-dialog-bar">'+bi('p', 'RHYVIA 律动床', 'RHYVIA rhythm bed', 'id="bed-dialog-title"')+'<button type="button" data-bed-close>'+bi('span', '关闭', 'Close')+'<span aria-hidden="true">×</span></button></div>'+img('rhythm-bed-20261022.jpg', 'RHYVIA 律动床完整场景', 'Full view of the RHYVIA rhythm bed setting')+'</dialog>'
     return content
