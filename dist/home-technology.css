@@ -1,0 +1,57 @@
+/* Live bilingual copy overlays the supplied full-width technology photograph. */
+.rhythm-technology{background:#f7f5ef;overflow:hidden}
+.rhythm-visual{position:relative;width:100%;overflow:hidden;background:#f2eadf;isolation:isolate}
+.rhythm-visual picture{display:block}
+.rhythm-visual img{display:block;width:100%;height:auto;aspect-ratio:1659/948;object-fit:cover;transition:transform 1.5s var(--ease)}
+.rhythm-visual:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(249,247,241,.9),rgba(249,247,241,.65) 19%,rgba(249,247,241,0) 39%);z-index:1}
+.rhythm-heading{position:absolute;top:clamp(30px,3.3vw,65px);left:var(--gutter);right:var(--gutter);display:grid;grid-template-columns:1.15fr 1fr;gap:7%;align-items:center;z-index:2}
+.rhythm-heading .eyebrow{color:#80613a;font-size:10px;letter-spacing:.16em;line-height:1.8;margin-bottom:17px}
+.rhythm-heading h2{font-size:clamp(34px,3.3vw,66px);line-height:1.15;letter-spacing:-.025em;font-weight:400}
+.rhythm-heading h2 em{font-style:normal;color:#8b683c}
+.rhythm-introduction{max-width:620px}
+.rhythm-introduction p{font-size:clamp(14px,1vw,18px);line-height:1.8;color:#4e544b}
+.rhythm-introduction .rhythm-lead{font-size:clamp(16px,1.2vw,21px);line-height:1.6;color:var(--ink);margin-bottom:12px}
+.rhythm-visual-caption{position:absolute;bottom:24px;left:var(--gutter);z-index:2;background:rgba(247,245,239,.78);border:1px solid rgba(255,255,255,.6);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:10px 17px;border-radius:30px;font-size:11px;letter-spacing:.07em;color:#4b5146}
+.rhythm-bottom{position:relative;padding:0 var(--gutter) 80px;background:radial-gradient(ellipse at 0% 100%,#e4edf080,transparent 42%),radial-gradient(ellipse at 100% 100%,#e4edf080,transparent 42%)}
+.rhythm-steps{list-style:none;margin:0;padding:48px 0 42px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.rhythm-step{position:relative;padding:0 24px;border-left:1px solid #a48c6138;text-align:center}
+.rhythm-step:first-child{border-left:0}
+.rhythm-step-top{display:flex;align-items:center;justify-content:center;margin-bottom:19px}
+.rhythm-step-icon{display:grid;place-items:center;width:72px;height:72px;border:1px solid #ac90645e;border-radius:50%;color:#97713f;background:#f1eadc45;transition:transform .5s var(--ease),background .5s,border-color .5s}
+.rhythm-step-icon svg{width:43px;height:43px}
+.rhythm-step h3{font-size:16px;line-height:1.45;font-weight:400;letter-spacing:.025em;color:#6f5836}
+.rhythm-closing{display:flex;justify-content:space-between;gap:50px;align-items:center;border-top:1px solid #a48c6138;padding-top:34px}
+.rhythm-closing p{font-size:16px;line-height:1.85;max-width:650px;color:#64695f}
+.rhythm-closing .button{flex-shrink:0;border-radius:40px;gap:30px}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){.rhythm-visual:hover img{transform:scale(1.015)}.rhythm-step:hover .rhythm-step-icon{transform:translateY(-4px);background:#eee3cf;border-color:#a48c61}}
+@media(max-width:1100px){
+ .rhythm-heading{top:28px;gap:5%;grid-template-columns:1fr 1fr}
+ .rhythm-heading h2{font-size:34px}
+ .rhythm-heading .eyebrow{font-size:9px;letter-spacing:.1em;margin-bottom:12px}
+ .rhythm-introduction p{font-size:13px;line-height:1.7}
+ .rhythm-introduction .rhythm-lead{font-size:15px;margin-bottom:8px}
+ .rhythm-closing{gap:30px}.rhythm-closing p{font-size:15px}.rhythm-closing .button{font-size:13px;gap:18px}
+}
+/* On narrow screens, extend the light top of the scene for readable copy without cropping the chair. */
+@media(max-width:800px){
+ .rhythm-visual{display:flex;flex-direction:column}
+ .rhythm-heading{position:relative;inset:auto;order:-1;padding:38px var(--gutter) 70px;grid-template-columns:1fr;gap:22px;background:linear-gradient(180deg,#f2eadf,#f2eadf 80%,#f2eadf00)}
+ .rhythm-visual picture{margin-top:-75px;position:relative}
+ .rhythm-visual picture:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#f2eadf,transparent 27%);pointer-events:none}
+ .rhythm-visual:after{display:none}
+ .rhythm-heading h2{font-size:36px}
+ .rhythm-heading .eyebrow{margin-bottom:16px}
+ .rhythm-introduction{max-width:620px}
+ .rhythm-introduction p{font-size:14px;line-height:1.85}
+ .rhythm-introduction .rhythm-lead{font-size:16px;margin-bottom:12px}
+}
+@media(max-width:600px){
+ .rhythm-heading h2{font-size:35px}
+ .rhythm-visual img{aspect-ratio:1/1.05;object-position:center 53%}
+ .rhythm-visual-caption{bottom:15px;font-size:10px;padding:8px 13px}
+ .rhythm-bottom{padding-bottom:55px}
+ .rhythm-steps{grid-template-columns:repeat(2,minmax(0,1fr));padding:30px 0;gap:27px 0}
+ .rhythm-step{padding-inline:12px}.rhythm-step:nth-child(3){border-left:0}
+ .rhythm-step-top{margin-bottom:14px}.rhythm-step-icon{width:58px;height:58px}.rhythm-step-icon svg{width:36px;height:36px}.rhythm-step h3{font-size:14px}
+ .rhythm-closing{flex-direction:column;align-items:flex-start;gap:23px;padding-top:26px}.rhythm-closing p{font-size:14px}.rhythm-closing .button{font-size:13px;padding:16px 23px}
+}
