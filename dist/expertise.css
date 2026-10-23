@@ -65,5 +65,6 @@
   .evidence-certification:hover img{transform:scale(1.018)}
 }
 
-/* Preserve the complete portrait building composition on every screen. */
-.heritage-building .evidence-building{aspect-ratio:1121/1403!important}
+/* Square editorial crop, keeping the tower tip in view. */
+.heritage-building .evidence-building{aspect-ratio:1!important}
+.heritage-building .evidence-building img{object-fit:cover;object-position:50% 15%}
