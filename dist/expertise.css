@@ -64,3 +64,6 @@
   .evidence-original:hover::after{opacity:1}
   .evidence-certification:hover img{transform:scale(1.018)}
 }
+
+/* Preserve the complete portrait building composition on every screen. */
+.heritage-building .evidence-building{aspect-ratio:1121/1403!important}
