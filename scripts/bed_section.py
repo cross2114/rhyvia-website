@@ -45,8 +45,8 @@ def build_product_ranges(bi, img, button):
         ('rhythmic-sofas', '水平律动组合沙发', 'HORIZONTAL RHYTHMIC SECTIONAL SOFAS',
          '以轻柔律动，让共享时光更舒适。', 'Shared comfort, enhanced by gentle rhythmic motion.', 'SOFA', [
             ('sofa-grey-20261026.jpg', '灰色条纹律动组合沙发', 'Grey channel-tufted rhythmic sectional sofa'),
-            ('sofa-cream-20261026.png', '奶油色律动组合沙发', 'Cream rhythmic sectional sofa'),
-            ('sofa-burgundy-20261026.png', '酒红色律动组合沙发', 'Burgundy rhythmic sectional sofa')])
+            ('sofa-cream-20261026.lossless.webp', '奶油色律动组合沙发', 'Cream rhythmic sectional sofa'),
+            ('sofa-burgundy-20261026.lossless.webp', '酒红色律动组合沙发', 'Burgundy rhythmic sectional sofa')])
     ]
     content = '<div class="product-ranges">'
     for anchor, zh, en, desc_zh, desc_en, category, images in ranges:

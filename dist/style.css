@@ -111,3 +111,12 @@ body.dialog-open{overflow:hidden}
  .personalized-photo{inset:auto 0 0;height:430px}
  .personalized-shade{background:linear-gradient(180deg,#f3eee6 0%,#f3eee6 56%,#f3eee6c2 65%,transparent 78%)}
 }
+
+/* Mobile scene framing follows the product, not the desktop copy space.
+   Bound image height by viewport width so narrow screens retain the silhouette. */
+@media(max-width:760px){
+ .hero-image img{object-position:right center}
+ .chair-photo{top:auto;height:min(69%,110vw)}
+ .chair-photo img{object-position:76% center}
+ .personalized-photo{height:min(430px,100vw)}
+}

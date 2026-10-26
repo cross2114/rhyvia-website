@@ -19,7 +19,8 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory dist
 - 页面交互：`dist/site.js`、`dist/pages.css`。
 - 公共效果：`dist/cursor.js`、`dist/ripple.js`。
 - 语言选择：`dist/language.js`；显式链接参数 → 已保存的选择 → 浏览器偏好列表中最先匹配的中文或英文 → 英文。中文地区变体统一使用现有简体中文文案。自动匹配不写入存储，只有手动切换才保存；保留旧版本已有的语言记录。存储被禁用时仍可在当前页面切换。
-- 图片：`dist/assets/`。
+- 图片：`dist/assets/`。原图保留，页面优先引用经过像素校验的 `.lossless.webp`。
+- 无损压缩：使用带 libwebp 的 Pillow，运行 `python3 scripts/optimize_images.py`，再运行 `python3 scripts/build_pages.py`。仅处理页面引用的较大 PNG；保持分辨率、RGBA 像素及 ICC 色彩配置一致，只采用体积变小的结果，不重编码 JPEG。结果与像素摘要保存在 `scripts/lossless-images.json`。
 - 联系方式：`dist/site-config.js`。当前电话、邮箱和微信信息尚未配置，预约表单仅整理预约意向，不会向服务器提交或自动确认预约。
 
 ## GitHub Pages

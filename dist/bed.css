@@ -45,7 +45,7 @@
 @media(max-width:900px){.bed-feature{padding:26px 21px}.bed-feature h3{font-size:22px}.bed-inquiry{align-items:flex-start;gap:30px;flex-direction:column}}
 @media(max-width:760px){
  .bed-heading{margin-bottom:30px}.bed-heading h2{font-size:34px;line-height:1.3;margin:20px 0}.bed-heading .section-lead br{display:none}
- .bed-scene{aspect-ratio:1.12;margin:0 calc(-1 * var(--gutter))!important;border-radius:0}.bed-scene .bed-photo{object-position:54% center}
+ .bed-scene{aspect-ratio:1.45;margin:0 calc(-1 * var(--gutter))!important;border-radius:0}.bed-scene .bed-photo{object-position:center}
  .bed-order-tag{top:16px;right:16px;padding:9px 15px;font-size:10px}.bed-view{right:16px;bottom:16px;padding:9px 13px;font-size:11px;gap:8px}
  .bed-scene-caption{left:20px;bottom:31px;font-size:9px;letter-spacing:.09em}
  .bed-experience{grid-template-columns:1fr;gap:20px;padding:45px 0 28px}.bed-experience h2{font-size:31px;margin-top:15px}
