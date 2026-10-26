@@ -53,3 +53,32 @@
  .bed-inquiry{margin-top:35px;padding-top:32px;gap:25px}.bed-inquiry h2{font-size:31px}.bed-inquiry .button{width:100%;justify-content:space-between;font-size:13px;padding:19px 22px}
  .bed-dialog-bar{padding:6px 10px}.bed-dialog-bar button{gap:10px}
 }
+
+/* Special-order collections: full product compositions, three across. */
+.product-ranges{margin-top:80px}
+.product-range{scroll-margin-top:110px}
+.product-range+.product-range{margin-top:58px;padding-top:48px;border-top:1px solid #b8a68b70}
+.product-range-heading{text-align:center;margin:0 auto 30px;max-width:1000px}
+.product-range-heading h3{font:400 clamp(28px,3vw,46px)/1.22 var(--serif);letter-spacing:.025em}
+.product-range-heading .section-lead{margin:12px auto 20px;font-size:16px;max-width:760px}
+.product-range-heading .button{margin:0;background:transparent;color:var(--ink);border:1px solid #ad9f8b;border-radius:30px;padding:12px 24px;min-height:44px;font-size:11px;letter-spacing:.12em;gap:25px}
+.product-range-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.product-range-card{position:relative;display:block;aspect-ratio:4/3;border-radius:8px;overflow:hidden;background:#e6ddce;isolation:isolate}
+.product-range-card>img{display:block;width:100%;height:100%;object-fit:cover}
+.product-range-view{position:absolute;bottom:14px;right:14px;display:flex;align-items:center;gap:12px;padding:9px 14px;border-radius:24px;border:1px solid #fff8;background:rgba(247,245,240,.78);backdrop-filter:blur(16px);font-size:11px;color:var(--ink)}
+.product-range-view>span:last-child{font-size:18px;line-height:1}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+.product-range-card>img{transition:transform 1s var(--ease)}
+.product-range-card:hover>img{transform:scale(1.035)}
+.product-range-view{transition:background .3s,transform .4s var(--ease)}
+.product-range-card:hover .product-range-view{background:#faf7eef2;transform:translateY(-3px)}
+}
+@media(max-width:760px){
+.product-ranges{margin-top:48px}
+.product-range+.product-range{margin-top:38px;padding-top:36px}
+.product-range-heading{margin-bottom:24px}
+.product-range-heading h3{font-size:29px}
+.product-range-heading .section-lead{font-size:14px;margin:12px auto 18px}
+.product-range-grid{grid-template-columns:1fr;gap:16px}
+.product-range-view{bottom:12px;right:12px}
+}

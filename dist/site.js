@@ -3,7 +3,7 @@
   const header=document.querySelector('#header'),menu=document.querySelector('#mobile-nav'),toggle=document.querySelector('#menu-toggle');
   const motion=matchMedia('(prefers-reduced-motion: reduce)');
   const config=window.RHYVIA_CONFIG||{};
-  const shared={skip:'Skip to content',navHome:'Home',navChairs:'Our chairs',navTech:'Our technology',navStory:'Our expertise',book:'Book an experience',wellnessEyebrow:'DYNAMIC WELLNESS',wellnessTitle:'Gentle motion.<em> Comfort in your rhythm.</em>',precisionTitle:'Precision in motion',precisionBody:'Smooth, continuous horizontal motion.<br>A gentle rhythm to settle into.',comfortTitle:'Comfort, made personal',comfortBody:'Choose your mode and your time.<br>Unwind in a way that feels like you.',homeTitle:'Designed for home',homeBody:'Warm materials. Considered lines.<br>Comfort that belongs in your everyday space.',ctaTitle:'Find your rhythm of comfort.',ctaBody:'Experience RHYVIA horizontal motion for yourself.<br>Explore three modes and discover your way to unwind.',footerTag:'Comfort has a rhythm.',backTop:'Back to top',footerLine:'RHYTHM · COMFORT · EVERY DAY'};
+  const shared={skip:'Skip to content',navHome:'Home',navChairs:'Our products',navTech:'Our technology',navStory:'Our expertise',book:'Book an experience',wellnessEyebrow:'DYNAMIC WELLNESS',wellnessTitle:'Gentle motion.<em> Comfort in your rhythm.</em>',precisionTitle:'Precision in motion',precisionBody:'Smooth, continuous horizontal motion.<br>A gentle rhythm to settle into.',comfortTitle:'Comfort, made personal',comfortBody:'Choose your mode and your time.<br>Unwind in a way that feels like you.',homeTitle:'Designed for home',homeBody:'Warm materials. Considered lines.<br>Comfort that belongs in your everyday space.',ctaTitle:'Find your rhythm of comfort.',ctaBody:'Experience RHYVIA horizontal motion for yourself.<br>Explore three modes and discover your way to unwind.',footerTag:'Comfort has a rhythm.',backTop:'Back to top',footerLine:'RHYTHM · COMFORT · EVERY DAY'};
   document.querySelectorAll('[data-i18n]').forEach(el=>{if(shared[el.dataset.i18n])el.dataset.en=shared[el.dataset.i18n];});
   document.querySelectorAll('[data-en]').forEach(el=>el.dataset.zh=el.innerHTML);
   document.querySelectorAll('[data-alt-en]').forEach(el=>el.dataset.altZh=el.alt);
@@ -88,7 +88,7 @@
   }
   function requestText(){
     if(!lastRequest)return '';
-    return [copy('RHYVIA 体验预约意向','RHYVIA experience request'),copy('称呼：','Name: ')+lastRequest.name,copy('邮箱：','Email: ')+lastRequest.email,copy('产品：','Product: ')+(lastRequest.chair==='BED'?copy('RHYVIA 律动床（特别订购）','RHYVIA rhythm bed (special order)'):lastRequest.chair?'RHYVIA '+lastRequest.chair:copy('希望现场了解','Please help me choose')),copy('偏好日期：','Preferred date: ')+lastRequest.date,copy('偏好地点：','Preferred location: ')+lastRequest.location,lastRequest.notes?copy('备注：','Notes: ')+lastRequest.notes:'',copy('以上为预约意向，具体时间与地点请团队确认。','This is a request. Please confirm the time and location with the team.')].filter(Boolean).join('\n');
+    return [copy('RHYVIA 体验预约意向','RHYVIA experience request'),copy('称呼：','Name: ')+lastRequest.name,copy('邮箱：','Email: ')+lastRequest.email,copy('产品：','Product: ')+(lastRequest.chair==='BED'?copy('RHYVIA 律动床（特别订购）','RHYVIA rhythm bed (special order)'):lastRequest.chair==='SOFA'?copy('RHYVIA 律动沙发（特别订购）','RHYVIA rhythmic sofa (special order)'):lastRequest.chair?'RHYVIA '+lastRequest.chair:copy('希望现场了解','Please help me choose')),copy('偏好日期：','Preferred date: ')+lastRequest.date,copy('偏好地点：','Preferred location: ')+lastRequest.location,lastRequest.notes?copy('备注：','Notes: ')+lastRequest.notes:'',copy('以上为预约意向，具体时间与地点请团队确认。','This is a request. Please confirm the time and location with the team.')].filter(Boolean).join('\n');
   }
   function renderDialog(){
     if(!dialog)return;
@@ -114,7 +114,7 @@
     const now=new Date(),date=form.elements.date;
     date.min=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');
     const chair=new URLSearchParams(location.search).get('chair');
-    if(['ONE','TWO','THREE','BED'].includes(chair))form.elements.chair.value=chair;
+    if(['ONE','TWO','THREE','BED','SOFA'].includes(chair))form.elements.chair.value=chair;
     form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;lastRequest=Object.fromEntries(new FormData(form));activeChannel=config.email?'email':config.whatsapp?'whatsapp':null;renderDialog();openDialog();});
     copyButton.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(summary.value);status.textContent=copy('已复制预约信息，尚未发送。','Request copied. Nothing has been sent.');}catch{summary.focus();summary.select();status.textContent=copy('请使用系统复制快捷键保存已选中的信息。','Use your system copy shortcut to copy the selected request.');}});
   }

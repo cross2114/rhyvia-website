@@ -27,7 +27,36 @@ def build_bed_section(bi, img, button, label, title):
     content += '<div class="bed-features">'
     for i, (key, zh, en, body_zh, body_en) in enumerate(features):
         content += f'<article class="bed-feature reveal" style="--reveal-delay:{i * 80}ms"><span class="bed-feature-number" aria-hidden="true">0{i+1}</span><span class="bed-feature-icon"><svg viewBox="0 0 40 40" aria-hidden="true">{icons[key]}</svg></span>'+bi('h3', zh, en)+bi('p', body_zh, body_en)+'</article>'
-    content += '</div><div class="bed-inquiry reveal" id="bed-inquiry"><div>'+label('特别订购服务', 'SPECIAL ORDER SERVICE')+title('为您的空间<br>量身打造。', 'Made to belong<br>in your space.')+bi('p', '欢迎联系我们，了解您所在地区的尺寸、饰面及供应信息。', 'Contact us to explore sizes, finishes and availability in your region.', 'class="section-lead"')+'</div>'
+    content += '</div>'
+    content += build_product_ranges(bi, img, button)
+    content += '<div class="bed-inquiry reveal" id="bed-inquiry"><div>'+label('特别订购服务', 'SPECIAL ORDER SERVICE')+title('为您的空间<br>量身打造。', 'Made to belong<br>in your space.')+bi('p', '欢迎联系我们，了解您所在地区的尺寸、饰面及供应信息。', 'Contact us to explore sizes, finishes and availability in your region.', 'class="section-lead"')+'</div>'
     content += button('咨询律动床', 'Enquire about the rhythm bed', inquiry)+'</div></section>'
     content += '<dialog class="bed-dialog" id="bed-dialog" aria-labelledby="bed-dialog-title"><div class="bed-dialog-bar">'+bi('p', 'RHYVIA 律动床', 'RHYVIA rhythm bed', 'id="bed-dialog-title"')+'<button type="button" data-bed-close>'+bi('span', '关闭', 'Close')+'<span aria-hidden="true">×</span></button></div>'+img('rhythm-bed-20261022.jpg', 'RHYVIA 律动床完整场景', 'Full view of the RHYVIA rhythm bed setting')+'</dialog>'
     return content
+
+
+def build_product_ranges(bi, img, button):
+    ranges = [
+        ('wellness-beds', '律动健康床', 'RHYTHMIC WELLNESS BEDS',
+         '三款独特设计，延续 RHYVIA 的舒适体验。', 'The Rhyvia experience, available in three distinctive designs.', 'BED', [
+            ('bed-split-20261026.jpg', '米色双床组合律动床', 'Beige split rhythmic wellness bed'),
+            ('bed-grey-20261026.jpg', '深灰色律动健康床', 'Charcoal rhythmic wellness bed'),
+            ('bed-cream-20261026.jpg', '奶油色律动健康床', 'Cream rhythmic wellness bed')]),
+        ('rhythmic-sofas', '律动组合沙发', 'RHYTHMIC SECTIONAL SOFAS',
+         '以轻柔律动，让共享时光更舒适。', 'Shared comfort, enhanced by gentle rhythmic motion.', 'SOFA', [
+            ('sofa-grey-20261026.jpg', '灰色条纹律动组合沙发', 'Grey channel-tufted rhythmic sectional sofa'),
+            ('sofa-cream-20261026.png', '奶油色律动组合沙发', 'Cream rhythmic sectional sofa'),
+            ('sofa-burgundy-20261026.png', '酒红色律动组合沙发', 'Burgundy rhythmic sectional sofa')])
+    ]
+    content = '<div class="product-ranges">'
+    for anchor, zh, en, desc_zh, desc_en, category, images in ranges:
+        content += f'<section class="product-range" id="{anchor}" aria-labelledby="{anchor}-title"><header class="product-range-heading reveal">'
+        content += bi('h3', zh, en, f'id="{anchor}-title"')
+        content += bi('p', desc_zh, desc_en, 'class="section-lead"')
+        content += button('特别订购', 'SPECIAL ORDER', f'/experience/?chair={category}#request')+'</header><div class="product-range-grid">'
+        for i, (asset, alt_zh, alt_en) in enumerate(images):
+            content += f'<a class="product-range-card reveal" href="/assets/{asset}" data-product-view aria-haspopup="dialog" style="--reveal-delay:{i*80}ms">'
+            content += img(asset, alt_zh, alt_en)
+            content += '<span class="product-range-view">'+bi('span', '查看大图', 'View image')+'<span aria-hidden="true">＋</span></span></a>'
+        content += '</div></section>'
+    return content+'</div>'
