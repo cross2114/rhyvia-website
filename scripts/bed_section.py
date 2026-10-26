@@ -15,7 +15,7 @@ def build_bed_section(bi, img, button, label, title):
     content = '<section class="rhythm-bed section-pad" id="rhythm-bed" aria-labelledby="bed-title">'
     content += '<span id="compare" aria-hidden="true"></span><header class="bed-heading reveal">'
     content += label('不止于椅', 'BEYOND THE CHAIR')
-    content += bi('h2', '律动健康科技，<br>为深度休息而生。', 'Rhythm technology.<br>Made for deeper rest.', 'id="bed-title"')
+    content += bi('h2', '水平律动健康科技，<br>为深度休息而生。', 'Horizontal rhythm technology.<br>Made for deeper rest.', 'id="bed-title"')
     content += bi('p', 'RHYVIA 律动床将温和的水平律动延伸至全尺寸床体，<br>为休息与放松带来更完整的体验。接受特别订购。', 'The RHYVIA rhythm bed brings gentle horizontal motion to a full-size bed.<br>A more complete experience of rest and relaxation, available by special order.', 'class="section-lead"')
     content += '</header><figure class="bed-scene reveal">'
     content += img('rhythm-bed-20261022.jpg', '暖色卧室中的 RHYVIA 双床组合律动床', 'The RHYVIA rhythm bed in a warm, sunlit bedroom', 'bed-photo')
@@ -37,12 +37,12 @@ def build_bed_section(bi, img, button, label, title):
 
 def build_product_ranges(bi, img, button):
     ranges = [
-        ('wellness-beds', '律动健康床', 'RHYTHMIC WELLNESS BEDS',
+        ('wellness-beds', '水平律动健康床', 'HORIZONTAL RHYTHMIC WELLNESS BEDS',
          '三款独特设计，延续 RHYVIA 的舒适体验。', 'The Rhyvia experience, available in three distinctive designs.', 'BED', [
             ('bed-split-20261026.jpg', '米色双床组合律动床', 'Beige split rhythmic wellness bed'),
             ('bed-grey-20261026.jpg', '深灰色律动健康床', 'Charcoal rhythmic wellness bed'),
             ('bed-cream-20261026.jpg', '奶油色律动健康床', 'Cream rhythmic wellness bed')]),
-        ('rhythmic-sofas', '律动组合沙发', 'RHYTHMIC SECTIONAL SOFAS',
+        ('rhythmic-sofas', '水平律动组合沙发', 'HORIZONTAL RHYTHMIC SECTIONAL SOFAS',
          '以轻柔律动，让共享时光更舒适。', 'Shared comfort, enhanced by gentle rhythmic motion.', 'SOFA', [
             ('sofa-grey-20261026.jpg', '灰色条纹律动组合沙发', 'Grey channel-tufted rhythmic sectional sofa'),
             ('sofa-cream-20261026.png', '奶油色律动组合沙发', 'Cream rhythmic sectional sofa'),

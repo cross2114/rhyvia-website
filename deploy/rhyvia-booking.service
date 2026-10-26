@@ -1,0 +1,20 @@
+[Unit]
+Description=RHYVIA booking email service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+DynamicUser=yes
+WorkingDirectory=/opt/rhyvia-booking
+ExecStart=/usr/bin/python3 /opt/rhyvia-booking/booking.py
+EnvironmentFile=/etc/rhyvia-booking.env
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

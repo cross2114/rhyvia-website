@@ -56,3 +56,6 @@ html[lang=en] .inner-page h1{font-size:clamp(46px,4.6vw,70px);line-height:1.12}h
 
 /* Keep the product grid within narrow screens when five thumbnails are shown. */
 .product-gallery,.product-copy{min-width:0}
+
+#booking-status:not(:empty){margin-top:20px;font-size:14px;line-height:1.8;color:var(--ink)}
+.booking-form button:disabled{opacity:.6;cursor:wait}

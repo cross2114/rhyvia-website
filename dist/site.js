@@ -3,7 +3,7 @@
   const header=document.querySelector('#header'),menu=document.querySelector('#mobile-nav'),toggle=document.querySelector('#menu-toggle');
   const motion=matchMedia('(prefers-reduced-motion: reduce)');
   const config=window.RHYVIA_CONFIG||{};
-  const shared={skip:'Skip to content',navHome:'Home',navChairs:'Our products',navTech:'Our technology',navStory:'Our expertise',book:'Book an experience',wellnessEyebrow:'DYNAMIC WELLNESS',wellnessTitle:'Gentle motion.<em> Comfort in your rhythm.</em>',precisionTitle:'Precision in motion',precisionBody:'Smooth, continuous horizontal motion.<br>A gentle rhythm to settle into.',comfortTitle:'Comfort, made personal',comfortBody:'Choose your mode and your time.<br>Unwind in a way that feels like you.',homeTitle:'Designed for home',homeBody:'Warm materials. Considered lines.<br>Comfort that belongs in your everyday space.',ctaTitle:'Find your rhythm of comfort.',ctaBody:'Experience RHYVIA horizontal motion for yourself.<br>Explore three modes and discover your way to unwind.',footerTag:'Comfort has a rhythm.',backTop:'Back to top',footerLine:'RHYTHM · COMFORT · EVERY DAY'};
+  const shared={skip:'Skip to content',navHome:'Home',navChairs:'Our products',navTech:'Our technology',navStory:'Our expertise',book:'Book an experience',wellnessEyebrow:'DYNAMIC WELLNESS',wellnessTitle:'Horizontal rhythmic motion.<em> Comfort in your rhythm.</em>',precisionTitle:'Precision in motion',precisionBody:'Smooth, continuous horizontal motion.<br>A gentle rhythm to settle into.',comfortTitle:'Comfort, made personal',comfortBody:'Choose your mode and your time.<br>Unwind in a way that feels like you.',homeTitle:'Designed for home',homeBody:'Warm materials. Considered lines.<br>Comfort that belongs in your everyday space.',ctaTitle:'Find your rhythm of comfort.',ctaBody:'Experience RHYVIA horizontal motion for yourself.<br>Explore three modes and discover your way to unwind.',footerTag:'Comfort has a rhythm.',backTop:'Back to top',footerLine:'RHYTHM · COMFORT · EVERY DAY'};
   document.querySelectorAll('[data-i18n]').forEach(el=>{if(shared[el.dataset.i18n])el.dataset.en=shared[el.dataset.i18n];});
   document.querySelectorAll('[data-en]').forEach(el=>el.dataset.zh=el.innerHTML);
   document.querySelectorAll('[data-alt-en]').forEach(el=>el.dataset.altZh=el.alt);
@@ -115,7 +115,37 @@
     date.min=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');
     const chair=new URLSearchParams(location.search).get('chair');
     if(['ONE','TWO','THREE','BED','SOFA'].includes(chair))form.elements.chair.value=chair;
-    form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;lastRequest=Object.fromEntries(new FormData(form));activeChannel=config.email?'email':config.whatsapp?'whatsapp':null;renderDialog();openDialog();});
+    const submit=form.querySelector('[type=submit]'), feedback=document.querySelector('#booking-status');
+    let sending=false;
+    const notify=(zh,en)=>{feedback.dataset.zh=zh;feedback.dataset.en=en;feedback.textContent=copy(zh,en);};
+    form.addEventListener('submit',async event=>{
+      event.preventDefault();
+      if(sending || !form.reportValidity())return;
+      if(!['rhyviawellness.com','www.rhyviawellness.com'].includes(location.hostname)){
+        notify('此预览站暂不支持自动发送，请通过邮箱 13392884743@163.com 联系团队。','Automatic sending is unavailable on this preview. Please email 13392884743@163.com.');
+        feedback.focus();return;
+      }
+      sending=true;submit.disabled=true;form.setAttribute('aria-busy','true');
+      notify('正在发送，请稍候……','Sending your request…');
+      const controller=new AbortController(), timer=setTimeout(()=>controller.abort(),65000);
+      try{
+        const response=await fetch('/api/booking',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form))),signal:controller.signal});
+        const result=await response.json().catch(()=>null);
+        if(!response.ok || result?.ok!==true){
+          if(response.status===429)throw new Error('rate');
+          if(response.status===400)throw new Error('invalid');
+          throw new Error('unavailable');
+        }
+        form.reset();
+        notify('预约信息已发送给团队。我们将通过邮件与你联系，具体安排以团队确认为准。','Your request has been sent to our team. We will contact you by email to confirm the arrangements.');
+      }catch(error){
+        if(error.message==='rate')notify('提交较频繁，请稍后再试，或直接发邮件联系团队。','Too many requests. Please try again later or email our team.');
+        else if(error.message==='invalid')notify('请检查填写的信息和日期后重试。','Please check your details and preferred date, then try again.');
+        else notify('暂时无法确认发送结果，填写内容已保留。请稍后重试，或联系 13392884743@163.com；如已提交，请勿连续重复发送。','We could not confirm delivery. Your details are preserved. Please try later or email 13392884743@163.com; avoid repeated submissions.');
+      }finally{
+        clearTimeout(timer);sending=false;submit.disabled=false;form.removeAttribute('aria-busy');feedback.focus();
+      }
+    });
     copyButton.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(summary.value);status.textContent=copy('已复制预约信息，尚未发送。','Request copied. Nothing has been sent.');}catch{summary.focus();summary.select();status.textContent=copy('请使用系统复制快捷键保存已选中的信息。','Use your system copy shortcut to copy the selected request.');}});
   }
   translate(lang);scroll();
