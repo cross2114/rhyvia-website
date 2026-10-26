@@ -1,5 +1,8 @@
 """Bilingual rhythm-bed editorial section, replacing the chair comparison table."""
 
+# Restore the two product galleries once their replacement photography is ready.
+SHOW_PRODUCT_RANGES = False
+
 def build_bed_section(bi, img, button, label, title):
     inquiry = '/experience/?chair=BED#request'
     icons = {
@@ -28,7 +31,8 @@ def build_bed_section(bi, img, button, label, title):
     for i, (key, zh, en, body_zh, body_en) in enumerate(features):
         content += f'<article class="bed-feature reveal" style="--reveal-delay:{i * 80}ms"><span class="bed-feature-number" aria-hidden="true">0{i+1}</span><span class="bed-feature-icon"><svg viewBox="0 0 40 40" aria-hidden="true">{icons[key]}</svg></span>'+bi('h3', zh, en)+bi('p', body_zh, body_en)+'</article>'
     content += '</div>'
-    content += build_product_ranges(bi, img, button)
+    if SHOW_PRODUCT_RANGES:
+        content += build_product_ranges(bi, img, button)
     content += '<div class="bed-inquiry reveal" id="bed-inquiry"><div>'+label('特别订购服务', 'SPECIAL ORDER SERVICE')+title('为您的空间<br>量身打造。', 'Made to belong<br>in your space.')+bi('p', '欢迎联系我们，了解您所在地区的尺寸、饰面及供应信息。', 'Contact us to explore sizes, finishes and availability in your region.', 'class="section-lead"')+'</div>'
     content += button('咨询律动床', 'Enquire about the rhythm bed', inquiry)+'</div></section>'
     content += '<dialog class="bed-dialog" id="bed-dialog" aria-labelledby="bed-dialog-title"><div class="bed-dialog-bar">'+bi('p', 'RHYVIA 律动床', 'RHYVIA rhythm bed', 'id="bed-dialog-title"')+'<button type="button" data-bed-close>'+bi('span', '关闭', 'Close')+'<span aria-hidden="true">×</span></button></div>'+img('rhythm-bed-20261022.jpg', 'RHYVIA 律动床完整场景', 'Full view of the RHYVIA rhythm bed setting')+'</dialog>'
