@@ -59,3 +59,10 @@ html[lang=en] .inner-page h1{font-size:clamp(46px,4.6vw,70px);line-height:1.12}h
 
 #booking-status:not(:empty){margin-top:20px;font-size:14px;line-height:1.8;color:var(--ink)}
 .booking-form button:disabled{opacity:.6;cursor:wait}
+
+/* Updated RHYVIA THREE photography: show the entire transparent product. */
+#three .gallery-main{aspect-ratio:1672/941}
+#three .gallery-photo,#three .gallery-thumb img{object-fit:contain;object-position:center}
+.collection-card[href="#three"] .collection-image img{object-position:center}
+#three .gallery-thumbs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+#three .gallery-thumb{width:100%;min-width:0}
