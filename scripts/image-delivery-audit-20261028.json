@@ -1,0 +1,972 @@
+{
+  "lossless": true,
+  "resized": false,
+  "images": [
+    {
+      "path": "assets/expertise-factory-en-20261019.png",
+      "bytes": 2602193,
+      "size": [
+        2173,
+        724
+      ],
+      "uses": [
+        "our-story/index.html:data-src-en"
+      ],
+      "optimized": "assets/expertise-factory-en-20261019.lossless.webp",
+      "after_bytes": 2068018,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Verified lossless WebP with exact RGBA pixels and colour profile."
+    },
+    {
+      "path": "assets/expertise-factory-hd-20261019.lossless.webp",
+      "bytes": 2123180,
+      "size": [
+        2171,
+        724
+      ],
+      "uses": [
+        "our-story/index.html:data-src-zh",
+        "our-story/index.html:src"
+      ],
+      "optimized": "assets/expertise-factory-hd-20261019.lossless.webp",
+      "after_bytes": 2123180,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/expertise-awards-en-20261019.png",
+      "bytes": 1950400,
+      "size": [
+        1254,
+        1254
+      ],
+      "uses": [
+        "our-story/index.html:data-src-en"
+      ],
+      "optimized": "assets/expertise-awards-en-20261019.lossless.webp",
+      "after_bytes": 1455664,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Verified lossless WebP with exact RGBA pixels and colour profile."
+    },
+    {
+      "path": "assets/expertise-showroom-en-20261019.png",
+      "bytes": 1924811,
+      "size": [
+        1305,
+        1206
+      ],
+      "uses": [
+        "our-story/index.html:data-src-en"
+      ],
+      "optimized": "assets/expertise-showroom-en-20261019.lossless.webp",
+      "after_bytes": 1295830,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Verified lossless WebP with exact RGBA pixels and colour profile."
+    },
+    {
+      "path": "assets/expertise-certification-en-20261019.png",
+      "bytes": 1761063,
+      "size": [
+        1684,
+        934
+      ],
+      "uses": [
+        "our-story/index.html:data-src-en"
+      ],
+      "optimized": "assets/expertise-certification-en-20261019.lossless.webp",
+      "after_bytes": 1212456,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Verified lossless WebP with exact RGBA pixels and colour profile."
+    },
+    {
+      "path": "assets/horizontal-rhythm-wide-20261023.lossless.webp",
+      "bytes": 1692922,
+      "size": [
+        1659,
+        948
+      ],
+      "uses": [
+        "index.html:src"
+      ],
+      "optimized": "assets/horizontal-rhythm-wide-20261023.lossless.webp",
+      "after_bytes": 1692922,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/chair-sunlit-20261019.lossless.webp",
+      "bytes": 1657690,
+      "size": [
+        1619,
+        972
+      ],
+      "uses": [
+        "index.html:src"
+      ],
+      "optimized": "assets/chair-sunlit-20261019.lossless.webp",
+      "after_bytes": 1657690,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/expertise-awards-hd-20261019.lossless.webp",
+      "bytes": 1655888,
+      "size": [
+        1254,
+        1254
+      ],
+      "uses": [
+        "our-story/index.html:data-src-zh",
+        "our-story/index.html:src"
+      ],
+      "optimized": "assets/expertise-awards-hd-20261019.lossless.webp",
+      "after_bytes": 1655888,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/lifestyle-flow-hd.lossless.webp",
+      "bytes": 1637226,
+      "size": [
+        1388,
+        1058
+      ],
+      "uses": [
+        "technology/index.html:src"
+      ],
+      "optimized": "assets/lifestyle-flow-hd.lossless.webp",
+      "after_bytes": 1637226,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/expertise-building-20261023.lossless.webp",
+      "bytes": 1585154,
+      "size": [
+        1121,
+        1403
+      ],
+      "uses": [
+        "our-story/index.html:src"
+      ],
+      "optimized": "assets/expertise-building-20261023.lossless.webp",
+      "after_bytes": 1585154,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/expertise-atrium-20261019.lossless.webp",
+      "bytes": 1504356,
+      "size": [
+        1254,
+        1254
+      ],
+      "uses": [
+        "our-story/index.html:src"
+      ],
+      "optimized": "assets/expertise-atrium-20261019.lossless.webp",
+      "after_bytes": 1504356,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/chair-three-scene-20261027.lossless.webp",
+      "bytes": 1425580,
+      "size": [
+        1448,
+        1086
+      ],
+      "uses": [
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/chair-three-scene-20261027.lossless.webp",
+      "after_bytes": 1425580,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/technology-hero-20261021.lossless.webp",
+      "bytes": 1424496,
+      "size": [
+        1802,
+        873
+      ],
+      "uses": [
+        "technology/index.html:href",
+        "technology/index.html:src"
+      ],
+      "optimized": "assets/technology-hero-20261021.lossless.webp",
+      "after_bytes": 1424496,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/expertise-certification-hd-20261019.lossless.webp",
+      "bytes": 1383532,
+      "size": [
+        1683,
+        934
+      ],
+      "uses": [
+        "our-story/index.html:data-src-zh",
+        "our-story/index.html:src"
+      ],
+      "optimized": "assets/expertise-certification-hd-20261019.lossless.webp",
+      "after_bytes": 1383532,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/horizontal-rhythm-mobile-20261023.lossless.webp",
+      "bytes": 1376994,
+      "size": [
+        1086,
+        1448
+      ],
+      "uses": [
+        "index.html:srcset"
+      ],
+      "optimized": "assets/horizontal-rhythm-mobile-20261023.lossless.webp",
+      "after_bytes": 1376994,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/hero-seaside-20261019.lossless.webp",
+      "bytes": 1354840,
+      "size": [
+        1619,
+        971
+      ],
+      "uses": [
+        "index.html:href",
+        "index.html:src"
+      ],
+      "optimized": "assets/hero-seaside-20261019.lossless.webp",
+      "after_bytes": 1354840,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/experience-hero.lossless.webp",
+      "bytes": 1320318,
+      "size": [
+        1672,
+        941
+      ],
+      "uses": [
+        "experience/index.html:href",
+        "experience/index.html:src"
+      ],
+      "optimized": "assets/experience-hero.lossless.webp",
+      "after_bytes": 1320318,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/expertise-showroom-hd-20261019.lossless.webp",
+      "bytes": 1308626,
+      "size": [
+        1304,
+        1206
+      ],
+      "uses": [
+        "our-story/index.html:data-src-zh",
+        "our-story/index.html:src"
+      ],
+      "optimized": "assets/expertise-showroom-hd-20261019.lossless.webp",
+      "after_bytes": 1308626,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/rhythm-scene-20261021.lossless.webp",
+      "bytes": 1296484,
+      "size": [
+        1791,
+        878
+      ],
+      "uses": [
+        "index.html:src"
+      ],
+      "optimized": "assets/rhythm-scene-20261021.lossless.webp",
+      "after_bytes": 1296484,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/technology-seated.lossless.webp",
+      "bytes": 1240606,
+      "size": [
+        2175,
+        1904
+      ],
+      "uses": [
+        "technology/index.html:src"
+      ],
+      "optimized": "assets/technology-seated.lossless.webp",
+      "after_bytes": 1240606,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/lifestyle-recover-hd.lossless.webp",
+      "bytes": 1136526,
+      "size": [
+        1310,
+        1018
+      ],
+      "uses": [
+        "technology/index.html:src"
+      ],
+      "optimized": "assets/lifestyle-recover-hd.lossless.webp",
+      "after_bytes": 1136526,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/lifestyle-rest-hd.lossless.webp",
+      "bytes": 1118808,
+      "size": [
+        1369,
+        895
+      ],
+      "uses": [
+        "technology/index.html:src"
+      ],
+      "optimized": "assets/lifestyle-rest-hd.lossless.webp",
+      "after_bytes": 1118808,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/technology-sculpture.lossless.webp",
+      "bytes": 1109760,
+      "size": [
+        1672,
+        941
+      ],
+      "uses": [
+        "technology/index.html:src"
+      ],
+      "optimized": "assets/technology-sculpture.lossless.webp",
+      "after_bytes": 1109760,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/chair-three-reverse-20261027.lossless.webp",
+      "bytes": 736566,
+      "size": [
+        1672,
+        941
+      ],
+      "uses": [
+        "chairs/index.html:data-image",
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/chair-three-reverse-20261027.lossless.webp",
+      "after_bytes": 736566,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/chair-three-angle-20261027.lossless.webp",
+      "bytes": 728622,
+      "size": [
+        1672,
+        941
+      ],
+      "uses": [
+        "chairs/index.html:data-image",
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/chair-three-angle-20261027.lossless.webp",
+      "after_bytes": 728622,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/chair-three-side-20261027.lossless.webp",
+      "bytes": 668826,
+      "size": [
+        1870,
+        841
+      ],
+      "uses": [
+        "chairs/index.html:data-image",
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/chair-three-side-20261027.lossless.webp",
+      "after_bytes": 668826,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/chair-three-alternate-20261027.lossless.webp",
+      "bytes": 633520,
+      "size": [
+        1672,
+        941
+      ],
+      "uses": [
+        "chairs/index.html:data-image",
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/chair-three-alternate-20261027.lossless.webp",
+      "after_bytes": 633520,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/chair-three-front-20261027.lossless.webp",
+      "bytes": 532780,
+      "size": [
+        1672,
+        941
+      ],
+      "uses": [
+        "chairs/index.html:data-image",
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/chair-three-front-20261027.lossless.webp",
+      "after_bytes": 532780,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/rhythm-bed-20261022.jpg",
+      "bytes": 238844,
+      "size": [
+        1855,
+        1280
+      ],
+      "uses": [
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/rhythm-bed-20261022.jpg",
+      "after_bytes": 238844,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Lossless conversion is larger; retain original file."
+    },
+    {
+      "path": "assets/expertise-rocket-20261028.lossless.webp",
+      "bytes": 237848,
+      "size": [
+        489,
+        455
+      ],
+      "uses": [
+        "our-story/index.html:src"
+      ],
+      "optimized": "assets/expertise-rocket-20261028.lossless.webp",
+      "after_bytes": 237848,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/expertise-hero-20261021.jpg",
+      "bytes": 230197,
+      "size": [
+        1659,
+        948
+      ],
+      "uses": [
+        "our-story/index.html:href",
+        "our-story/index.html:src"
+      ],
+      "optimized": "assets/expertise-hero-20261021.jpg",
+      "after_bytes": 230197,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Lossless conversion is larger; retain original file."
+    },
+    {
+      "path": "assets/technology-system-20261021.jpg",
+      "bytes": 196386,
+      "size": [
+        1448,
+        1086
+      ],
+      "uses": [
+        "technology/index.html:src"
+      ],
+      "optimized": "assets/technology-system-20261021.jpg",
+      "after_bytes": 196386,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Lossless conversion is larger; retain original file."
+    },
+    {
+      "path": "assets/logo-transparent.lossless.webp",
+      "bytes": 160294,
+      "size": [
+        2172,
+        724
+      ],
+      "uses": [
+        "chairs/index.html:src",
+        "experience/index.html:src",
+        "index.html:src",
+        "our-story/index.html:src",
+        "technology/index.html:src"
+      ],
+      "optimized": "assets/logo-transparent.lossless.webp",
+      "after_bytes": 160294,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/chair-one-scene-20261019.jpg",
+      "bytes": 147744,
+      "size": [
+        1446,
+        1087
+      ],
+      "uses": [
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/chair-one-scene-20261019.jpg",
+      "after_bytes": 147744,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Lossless conversion is larger; retain original file."
+    },
+    {
+      "path": "assets/chair-two-scene-20261019.jpg",
+      "bytes": 137239,
+      "size": [
+        1448,
+        1086
+      ],
+      "uses": [
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/chair-two-scene-20261019.jpg",
+      "after_bytes": 137239,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Lossless conversion is larger; retain original file."
+    },
+    {
+      "path": "assets/ripple-left-original.lossless.webp",
+      "bytes": 123594,
+      "size": [
+        344,
+        272
+      ],
+      "uses": [
+        "experience/index.html:src",
+        "index.html:src",
+        "technology/index.html:src"
+      ],
+      "optimized": "assets/ripple-left-original.lossless.webp",
+      "after_bytes": 123594,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/ripple-right-original.lossless.webp",
+      "bytes": 107530,
+      "size": [
+        344,
+        272
+      ],
+      "uses": [
+        "experience/index.html:src",
+        "index.html:src",
+        "technology/index.html:src"
+      ],
+      "optimized": "assets/ripple-right-original.lossless.webp",
+      "after_bytes": 107530,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/chair-two-armrest-20261019.jpg",
+      "bytes": 88187,
+      "size": [
+        1672,
+        941
+      ],
+      "uses": [
+        "chairs/index.html:data-image",
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/chair-two-armrest-20261019.jpg",
+      "after_bytes": 88187,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Lossless conversion is larger; retain original file."
+    },
+    {
+      "path": "assets/chair-one-controls-20261019.jpg",
+      "bytes": 75407,
+      "size": [
+        1672,
+        941
+      ],
+      "uses": [
+        "chairs/index.html:data-image",
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/chair-one-controls-20261019.jpg",
+      "after_bytes": 75407,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Lossless conversion is larger; retain original file."
+    },
+    {
+      "path": "assets/chair-one-backrest-20261019.jpg",
+      "bytes": 74229,
+      "size": [
+        1672,
+        941
+      ],
+      "uses": [
+        "chairs/index.html:data-image",
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/chair-one-backrest-20261019.jpg",
+      "after_bytes": 74229,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Lossless conversion is larger; retain original file."
+    },
+    {
+      "path": "assets/chair-one-trim-20261019.jpg",
+      "bytes": 71484,
+      "size": [
+        1672,
+        941
+      ],
+      "uses": [
+        "chairs/index.html:data-image",
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/chair-one-trim-20261019.jpg",
+      "after_bytes": 71484,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Lossless conversion is larger; retain original file."
+    },
+    {
+      "path": "assets/chair-two-backrest-20261019.jpg",
+      "bytes": 69387,
+      "size": [
+        1672,
+        941
+      ],
+      "uses": [
+        "chairs/index.html:data-image",
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/chair-two-backrest-20261019.jpg",
+      "after_bytes": 69387,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Lossless conversion is larger; retain original file."
+    },
+    {
+      "path": "assets/chair-two-side-20261019.jpg",
+      "bytes": 63988,
+      "size": [
+        1672,
+        941
+      ],
+      "uses": [
+        "chairs/index.html:data-image",
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/chair-two-side-20261019.jpg",
+      "after_bytes": 63988,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Lossless conversion is larger; retain original file."
+    },
+    {
+      "path": "assets/chair-two-angle-20261019.jpg",
+      "bytes": 56755,
+      "size": [
+        1672,
+        941
+      ],
+      "uses": [
+        "chairs/index.html:data-image",
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/chair-two-angle-20261019.jpg",
+      "after_bytes": 56755,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Lossless conversion is larger; retain original file."
+    },
+    {
+      "path": "assets/chair-two-front-20261019.jpg",
+      "bytes": 52011,
+      "size": [
+        1672,
+        941
+      ],
+      "uses": [
+        "chairs/index.html:data-image",
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/chair-two-front-20261019.jpg",
+      "after_bytes": 52011,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Lossless conversion is larger; retain original file."
+    },
+    {
+      "path": "assets/chair-one-front-20261019.jpg",
+      "bytes": 51647,
+      "size": [
+        1672,
+        941
+      ],
+      "uses": [
+        "chairs/index.html:data-image",
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/chair-one-front-20261019.jpg",
+      "after_bytes": 51647,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Lossless conversion is larger; retain original file."
+    },
+    {
+      "path": "assets/ripple-left.webp",
+      "bytes": 50588,
+      "size": [
+        344,
+        272
+      ],
+      "uses": [
+        "expertise.css:css"
+      ],
+      "optimized": "assets/ripple-left.webp",
+      "after_bytes": 50588,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/chair-one-angle-20261019.jpg",
+      "bytes": 49429,
+      "size": [
+        1672,
+        941
+      ],
+      "uses": [
+        "chairs/index.html:data-image",
+        "chairs/index.html:src"
+      ],
+      "optimized": "assets/chair-one-angle-20261019.jpg",
+      "after_bytes": 49429,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Lossless conversion is larger; retain original file."
+    },
+    {
+      "path": "assets/ripple-right.webp",
+      "bytes": 42786,
+      "size": [
+        344,
+        272
+      ],
+      "uses": [
+        "expertise.css:css"
+      ],
+      "optimized": "assets/ripple-right.webp",
+      "after_bytes": 42786,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Retain existing encoded WebP; no quality or resolution change."
+    },
+    {
+      "path": "assets/sleep-icon-original.png",
+      "bytes": 20690,
+      "size": [
+        131,
+        144
+      ],
+      "uses": [
+        "index.html:src"
+      ],
+      "optimized": "assets/sleep-icon-original.lossless.webp",
+      "after_bytes": 13170,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Verified lossless WebP with exact RGBA pixels and colour profile."
+    },
+    {
+      "path": "assets/digestion-icon-original.png",
+      "bytes": 20536,
+      "size": [
+        131,
+        144
+      ],
+      "uses": [
+        "index.html:src"
+      ],
+      "optimized": "assets/digestion-icon-original.lossless.webp",
+      "after_bytes": 13360,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Verified lossless WebP with exact RGBA pixels and colour profile."
+    },
+    {
+      "path": "assets/exercise-icon-original.png",
+      "bytes": 20410,
+      "size": [
+        131,
+        144
+      ],
+      "uses": [
+        "index.html:src"
+      ],
+      "optimized": "assets/exercise-icon-original.lossless.webp",
+      "after_bytes": 13036,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Verified lossless WebP with exact RGBA pixels and colour profile."
+    },
+    {
+      "path": "assets/voice-icon-original.png",
+      "bytes": 18694,
+      "size": [
+        131,
+        124
+      ],
+      "uses": [
+        "index.html:src"
+      ],
+      "optimized": "assets/voice-icon-original.lossless.webp",
+      "after_bytes": 12234,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Verified lossless WebP with exact RGBA pixels and colour profile."
+    },
+    {
+      "path": "assets/timer-icon-original.png",
+      "bytes": 18409,
+      "size": [
+        131,
+        124
+      ],
+      "uses": [
+        "index.html:src"
+      ],
+      "optimized": "assets/timer-icon-original.lossless.webp",
+      "after_bytes": 11508,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Verified lossless WebP with exact RGBA pixels and colour profile."
+    },
+    {
+      "path": "assets/brand-wave-original.png",
+      "bytes": 5506,
+      "size": [
+        95,
+        64
+      ],
+      "uses": [
+        "experience/index.html:src",
+        "index.html:src",
+        "technology/index.html:src"
+      ],
+      "optimized": "assets/brand-wave-original.lossless.webp",
+      "after_bytes": 4210,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Verified lossless WebP with exact RGBA pixels and colour profile."
+    },
+    {
+      "path": "assets/precision-icon-original.png",
+      "bytes": 3529,
+      "size": [
+        91,
+        85
+      ],
+      "uses": [
+        "index.html:src",
+        "technology/index.html:src"
+      ],
+      "optimized": "assets/precision-icon-original.lossless.webp",
+      "after_bytes": 2290,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Verified lossless WebP with exact RGBA pixels and colour profile."
+    },
+    {
+      "path": "assets/comfort-icon-original.png",
+      "bytes": 3397,
+      "size": [
+        92,
+        85
+      ],
+      "uses": [
+        "index.html:src",
+        "technology/index.html:src"
+      ],
+      "optimized": "assets/comfort-icon-original.lossless.webp",
+      "after_bytes": 2314,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Verified lossless WebP with exact RGBA pixels and colour profile."
+    },
+    {
+      "path": "assets/home-icon-original.png",
+      "bytes": 3144,
+      "size": [
+        91,
+        85
+      ],
+      "uses": [
+        "index.html:src",
+        "technology/index.html:src"
+      ],
+      "optimized": "assets/home-icon-original.lossless.webp",
+      "after_bytes": 2206,
+      "pixel_exact": true,
+      "resized": false,
+      "reason": "Verified lossless WebP with exact RGBA pixels and colour profile."
+    }
+  ],
+  "before_bytes": 41331656,
+  "after_bytes": 39085170
+}

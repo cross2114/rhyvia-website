@@ -19,6 +19,8 @@ jobs:
       - uses: actions/checkout@v6
       - name: Check language selection
         run: node --test tests/language.test.cjs
+      - name: Check image sizes and loading policy
+        run: python3 scripts/check_image_delivery.py
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5

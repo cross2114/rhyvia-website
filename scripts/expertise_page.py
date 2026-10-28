@@ -6,7 +6,7 @@ def build_expertise(bi, img, button, label, title, hero):
    return '<div class="evidence-window evidence-original evidence-technology">'+img('expertise-rocket-20261028.lossless.webp',zh,en)+'</div>'
   originals={'factory': 'expertise-factory-hd-20261019.lossless.webp', 'certification': 'expertise-certification-hd-20261019.lossless.webp', 'showroom': 'expertise-showroom-hd-20261019.lossless.webp', 'awards': 'expertise-awards-hd-20261019.lossless.webp'}
   if name in originals:
-   return f'<div class="evidence-window evidence-original evidence-{name}">{img(originals[name],zh,en).replace(' src=', f' data-src-zh="/assets/{originals[name]}" data-src-en="/assets/expertise-{name}-en-20261019.png" src=')}</div>'
+   return f'<div class="evidence-window evidence-original evidence-{name}">{img(originals[name],zh,en).replace(' src=', f' data-src-zh="/assets/{originals[name]}" data-src-en="/assets/expertise-{name}-en-20261019.lossless.webp" src=')}</div>'
   style=f'width:{1448/w*100:.6f}%;height:auto;left:{-x/w*100:.6f}%;top:0;transform:translateY({-y/4586*100:.6f}%)'
   return f'<div class="evidence-window evidence-{name}" style="aspect-ratio:{w}/{h}"><img src="/assets/expertise-client-reference-20261019.lossless.webp" width="1448" height="4586" loading="lazy" alt="{zh}" data-alt-en="{en}" style="{style}"></div>'
  body=hero('expertise-hero','expertise-hero-20261021.jpg','OUR EXPERTISE','每一份舒适，<br>都有深厚积淀。','Expertise behind<br>every experience.','以律动技术连接设计与制造，<br>让恢复与放松，自然融入日常。','Rhythm technology, thoughtful design and precise manufacturing.<br>Bringing rest and relaxation into everyday life.','#expertise','探索品牌实力','Discover our expertise')

@@ -84,4 +84,6 @@ body+='<section class="newsletter section-pad"><div>'+label('STAY IN OUR RHYTHM'
 body+=root_paths(cta).replace('href="/experience/"','href="#booking"')
 body+='<dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-dialog-title"><button class="dialog-close" type="button" aria-label="关闭 / Close">×</button>'+label('RHYVIA · YOUR EXPERIENCE','RHYVIA · YOUR EXPERIENCE')+bi('h2','预约信息','Your experience request','id="contact-dialog-title"')+'<p id="contact-message"></p><div id="wechat-qr" hidden></div><textarea id="request-summary" rows="8" readonly hidden aria-label="预约信息 / Request summary"></textarea><div class="dialog-actions"><button class="button button-dark" id="copy-request" type="button" hidden>'+bi('span','复制预约信息','Copy request')+'</button><a id="send-request" class="button button-dark" hidden>'+bi('span','联系团队','Contact the team')+' ↗</a><button class="text-link" id="dialog-done" type="button">'+bi('span','返回页面','Back to the page')+'</button></div><p id="copy-status" role="status" aria-live="polite"></p></dialog>'
 wrap('experience','experience','预约体验','Book an experience',body,'experience-hero.lossless.webp')
+from image_delivery import apply as apply_image_delivery
+apply_image_delivery()
 print('Built chairs, technology, our-story and experience.')

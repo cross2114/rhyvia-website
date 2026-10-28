@@ -8,6 +8,7 @@ from urllib.parse import unquote, urljoin, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 ATTR = re.compile(r'''(\b(?:href|src|data-image|data-src-en|data-src-zh)\s*=\s*["'])/(?!/)''')
+SRCSET = re.compile(r'''(\b(?:srcset|imagesrcset)\s*=\s*["'])([^"']+)(["'])''')
 
 
 class References(HTMLParser):
@@ -18,6 +19,9 @@ class References(HTMLParser):
     def handle_starttag(self, tag, attrs):
         self.urls.extend(value for key, value in attrs
                          if key in {"href", "src", "data-image", "data-src-en", "data-src-zh"} and value)
+        for key, value in attrs:
+            if key in {"srcset", "imagesrcset"} and value:
+                self.urls.extend(candidate.strip().split()[0] for candidate in value.split(','))
 
 
 def prepare(base_path):
@@ -30,7 +34,16 @@ def prepare(base_path):
     shutil.copytree(ROOT / "dist", output, ignore=shutil.ignore_patterns(".DS_Store"))
     pages = list(output.rglob("*.html"))
     for page in pages:
-        page.write_text(ATTR.sub(lambda m: m[1] + base_path, page.read_text()))
+        source = ATTR.sub(lambda m: m[1] + base_path, page.read_text())
+        def rewrite_set(match):
+            candidates = []
+            for candidate in match[2].split(','):
+                parts = candidate.strip().split()
+                if parts[0].startswith('/') and not parts[0].startswith('//'):
+                    parts[0] = base_path + parts[0].lstrip('/')
+                candidates.append(' '.join(parts))
+            return match[1] + ', '.join(candidates) + match[3]
+        page.write_text(SRCSET.sub(rewrite_set, source))
     (output / ".nojekyll").touch()
     # Check navigation, scripts, styles, images and dynamically selected gallery images.
     checked = 0
