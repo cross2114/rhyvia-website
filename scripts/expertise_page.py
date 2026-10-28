@@ -2,6 +2,8 @@
 def build_expertise(bi, img, button, label, title, hero):
  def p(zh,en,cls='section-lead'): return bi('p',zh,en,f'class="{cls}"')
  def crop(name, x,y,w,h,zh,en):
+  if name == 'technology':
+   return '<div class="evidence-window evidence-original evidence-technology">'+img('expertise-rocket-20261028.lossless.webp',zh,en)+'</div>'
   originals={'factory': 'expertise-factory-hd-20261019.lossless.webp', 'certification': 'expertise-certification-hd-20261019.lossless.webp', 'showroom': 'expertise-showroom-hd-20261019.lossless.webp', 'awards': 'expertise-awards-hd-20261019.lossless.webp'}
   if name in originals:
    return f'<div class="evidence-window evidence-original evidence-{name}">{img(originals[name],zh,en).replace(' src=', f' data-src-zh="/assets/{originals[name]}" data-src-en="/assets/expertise-{name}-en-20261019.png" src=')}</div>'

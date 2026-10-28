@@ -68,3 +68,6 @@
 /* Square editorial crop, keeping the tower tip in view. */
 .heritage-building .evidence-building{aspect-ratio:1!important}
 .heritage-building .evidence-building img{object-fit:cover;object-position:50% 15%}
+
+/* The rocket uses its own lossless image and shares the editorial hover effect. */
+.evidence-original.evidence-technology img{object-position:center top}

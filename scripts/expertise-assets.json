@@ -19,7 +19,7 @@
     ],
     "source": "Client-supplied 8c43ed6ff727a03ad9cdad87a94d2728.png",
     "method": "Original pixels, displayed through CSS crop windows; no generated buildings, awards or certificates.",
-    "limitation": "Headquarters and rocket still use the supplied layout. Factory, showroom, awards and certification use separate high-resolution client originals."
+    "limitation": "Rocket is now an independent, pixel-exact extraction from the supplied layout. Other documentary imagery uses separate client originals."
   },
   "globe": {
     "file": "dist/assets/expertise-globe.svg",
@@ -74,5 +74,19 @@
       ],
       "method": "Client-supplied original; copied without pixel edits."
     }
+  },
+  "rocket": {
+    "file": "dist/assets/expertise-rocket-20261028.lossless.webp",
+    "source": "dist/assets/expertise-client-reference-20261019.lossless.webp",
+    "rectangle": [
+      959,
+      2894,
+      489,
+      455
+    ],
+    "method": "Extract existing CSS sprite region, encode lossless WebP, verify exact RGBA pixels. No resampling or generated content.",
+    "source_bytes": 3914250,
+    "bytes": 237848,
+    "date": "2026-10-28"
   }
 }
